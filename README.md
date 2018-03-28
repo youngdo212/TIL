@@ -1,2 +1,2 @@
 # TIL
-Today I Learned
+매일매일 하는 습관을 들이자!
