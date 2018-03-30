@@ -77,7 +77,7 @@ selectEntries(to = 5, from = 3); // 똑같이 작동한다
 아, 3과 5는 시작과 끝을 나타내는군!
 
 인자가 사용될 변수의 이름을 함께 적어주면서 함수호출문 만으로도 인자의 의미를 파악할 수 있다. 그렇다면 우리의 자바스크립트는? 다행히도 ECMAScript6(ES6)의 destructuring을 이용하면 비슷하게 표현할 수 있다.
-```
+```javascript
 //ES6
 selectEntries({from: 3, to: 5});
 selectEntries({to: 5, from: 3}); // 같음
