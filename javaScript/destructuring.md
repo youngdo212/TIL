@@ -1,6 +1,6 @@
-# Distructuring
+# Destructuring
 [참고자료](http://exploringjs.com/es6/ch_destructuring.html#ch_destructuring)  
-Distructuring은 ECMAScript6(ES6)에서 제공하는 기능으로서 객체나 배열에 들어있는 여러 값들들 추출하는 효과적인 방법이다. (할당문의 좌변과 같이)데이터를 받는 위치에서 사용된다.
+Destructuring은 ECMAScript6(ES6)에서 제공하는 기능으로서 객체나 배열에 들어있는 여러 값들들 추출하는 효과적인 방법이다. (할당문의 좌변과 같이)데이터를 받는 위치에서 사용된다.
 ```
 const obj = {name: 'mando', age: 26, sex: 'm'};
 const {name: student, sex: sex} = obj;
@@ -13,8 +13,8 @@ const arr = ['a', 'b', 'c'];
 const [x, y] = arr;
 // x = 'a', y = 'b'
 ```
-* distructing source: 분해되는 데이터, 우변
-* distructing target: 값을 받는 데이터, 좌변
+* destructing source: 분해되는 데이터, 우변
+* destructing target: 값을 받는 데이터, 좌변
 * object pattern : { first: pattern, second: patter }
 * array pattern : [ pattern, patter ]
 
@@ -76,7 +76,7 @@ selectEntries(to = 5, from = 3); // 똑같이 작동한다
 ```
 아, 3과 5는 시작과 끝을 나타내는군!
 
-인자가 사용될 변수의 이름을 함께 적어주면서 함수호출문 만으로도 인자의 의미를 파악할 수 있다. 그렇다면 우리의 자바스크립트는? 다행히도 ECMAScript6(ES6)의 distructuring을 이용하면 비슷하게 표현할 수 있다.
+인자가 사용될 변수의 이름을 함께 적어주면서 함수호출문 만으로도 인자의 의미를 파악할 수 있다. 그렇다면 우리의 자바스크립트는? 다행히도 ECMAScript6(ES6)의 destructuring을 이용하면 비슷하게 표현할 수 있다.
 ```
 //ES6
 selectEntries({from: 3, to: 5});
@@ -88,6 +88,6 @@ function selectEntries({from = 0, to = 1} = {}){
 // = {} 는 TypeError를 방지하지 위해 디폴트 값을 넣어준 것
 ```
 
-Distructuring을 활용해 함수 호출 의도를 잘 드러내보자!
+Destructuring을 활용해 함수 호출 의도를 잘 드러내보자!
 
 Q. built-in 매소드 중에 객체를 인자로 받는 메소드가 있었나? 객체를 인자로 받아야 named para를 쓸텐데.. 지금까지 사용한 메소드는 전부 `,`로 인자를 받았던 것 같다. 잘 사용하지 않는듯한 방법을 사용해도 좋을까? 통일감이 없어서 별로인거 같은데.. 크롱한테 물어봐야겠다.
