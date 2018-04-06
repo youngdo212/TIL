@@ -78,5 +78,22 @@ console.log(String(student))
 ```
 `String()`이라는 함수는 인자로 들어가는 객체의 prototype의 `toString`메소드에 접근한다. 즉 toSring메소드를 객체 상황에 맞게 다르게 설정하면 `String()`함수를 다양하게 사용할 수 있다. 이것을 다형성(Polymorphism)이라고 한다.
 
-## Symbols
+## Symbols(ES6)
 
+```javascript
+let sym = Symbol("speakYourName");
+Person.prototype[sym] = function(){
+  console.log("symbol!")
+}
+student.speakYourName();
+// youngdo
+student[sym]();
+// symbol!
+```
+`Symbol`키워드는 유일한 값을 가지는 value이다.  
+
+```javascript
+console.log(Symbol("a") === Symbol("a"));
+//false
+```
+아직 왜 사용하는지 모르겠다...
